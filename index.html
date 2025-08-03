@@ -1,203 +1,169 @@
 <!doctype html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <title>DUCANH | HOME</title>
-    <style type="text/css">
-        .anhduc {
-            font-family: "Gill Sans", sans-serif;
-        }
-        * {
-            margin: 0;
-            padding: 0;
-        }
 
-        #video-background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -1;
-        }
+	<head>
+		<meta charset="utf-8">
+		<title>DUCANH | HOME</title>
+		<style type="text/css">
+    
+			/* CSS Document */
+      .anhduc{
+        font-family: "Gill Sans", sans-serif;
+      }
+			* {
+				margin: 0;
+				padding: 0;
+			}
 
-        .video-fallback {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url(https://wallpapercave.com/wp/wp9498799.png) no-repeat center center;
-            background-size: cover;
-            z-index: -2;
-        }
+			a {
+				text-decoration: none;
+			}
 
-        a {
-            text-decoration: none;
-        }
+			.clearfix:after {
+				content: "";
+				display: block;
+				height: 0;
+				visibility: hidden;
+				clear: both;
+			}
 
-        .clearfix:after {
-            content: "";
-            display: block;
-            height: 0;
-            visibility: hidden;
-            clear: both;
-        }
+			.clearfix {
+				*zoom: 1;
+			}
 
-        .clearfix {
-            *zoom: 1;
-        }
+			body {
+				background: url(https://images5.alphacoders.com/612/612540.jpg) no-repeat;
+				background-size: cover;
+				background-attachment: fixed;
+			}
 
-        body {
-            margin: 0;
-            padding: 0;
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
+			.content {
+				width: 900px;
+				height: 500px;
+				margin: 200px auto 0 auto;
+				border-radius: 10px;
+				background-color: rgba(236, 236, 236, 0.59);
+				transition: all 1.0s;
+				/*box-shadow: 0px 0px 20px rgba(0,0,0,0.3);*/
+			}
 
-        .content {
-            width: 900px;
-            height: 500px;
-            margin: 200px auto 0 auto;
-            border-radius: 10px;
-            background-color: rgba(236, 236, 236, 0.59);
-            transition: all 1.0s;
-            position: relative;
-        }
+			.content img {
+				float: left;
+				width: 200px;
+				height: 200px;
+				margin: 150px 0 0 80px;
+				border-radius: 100px;
 
-        .content img {
-            float: left;
-            width: 200px;
-            height: 200px;
-            margin: 150px 0 0 80px;
-            border-radius: 100px;
-        }
+			}
 
-        .content:hover {
-            box-shadow: 0px 0px 20px rgb(0, 162, 255);
-        }
+			.content:hover {
+				box-shadow: 0px 0px 20px rgb(0, 162, 255);
+			}
 
-        .content_r {
-            float: right;
-            width: 500px;
-            margin: 80px 60px 0 0;
-        }
+			.content_r {
+				float: right;
+				width: 500px;
+				margin: 80px 60px 0 0;
+				/*	background-color: pink;*/
+			}
 
-        .content_l {
-            float: left;
-            width: 100%;
-            text-align: center;
-        }
+			.content_l {
+				float: left;
+				width: 100%;
+				text-align: center;
+			}
 
-        .content_l h5 {
-            font-size: 17px;
-        }
+			.content_l h5 {
 
-        .bio {
-            margin-top: 10px;
-            color: #1F2023;
-            font-size: 18px;
-        }
+				font-size: 17px;
+			}
 
-        .color_1 {
-            color: #e90707;
-            font-size: 18px;
-        }
+			.bio {
+				margin-top: 10px;
+				color: #1F2023;
+				font-size: 18px;
+			}
 
-        .deeppink {
-            color: rgb(31, 53, 179);
-        }
+			.color_1 {
+				color: #e90707;
+				font-size: 18px;
+			}
 
-        .link {
-            margin-top: 30px;
-        }
+			.deeppink {
+				color: rgb(31, 53, 179);
+			}
 
-        .link a {
-            display: block;
-            float: left;
-            width: 120px;
-            height: 45px;
-            margin: 5px 5px 0 0;
-            color: #fff;
-            line-height: 45px;
-            transition: all 0.8s;
-            text-align: center;
-        }
+			.link {
+				margin-top: 30px;
+			}
 
-        .link a:hover {
-            background-color: rgba(0, 0, 0, 0.35);
-            box-shadow: 0px 0px 20px rgb(61, 196, 230);
-        }
+			.link a {
+				display: block;
+				float: left;
+				width: 120px;
+				height: 45px;
+				margin: 5px 5px 0 0;
+				/*	padding: 0 15px;*/
+				color: #fff;
+				line-height: 45px;
+				transition: all 0.8s;
+				/*	background-color: deeppink;*/
 
-        .black {
-            background-color: rgb(36, 35, 35);
-        }
+			}
 
-        .dodgerblue {
-            background-color: dodgerblue;
-        }
+			.link a:hover {
+				background-color: rgba(0, 0, 0, 0.35);
+                box-shadow: 0px 0px 20px rgb(61, 196, 230);
+			}
 
-        .green {
-            background-color: rgb(0, 211, 248);
-        }
+			.black {
+				background-color: rgb(36, 35, 35);
+			}
 
-        .red {
-            background-color: rgb(216, 25, 25);
-        }
+			.dodgerblue {
+				background-color: dodgerblue;
+			}
 
-        /* Responsive Design */
-        @media (max-width: 1000px) {
-            .content {
-                width: 90%;
-                margin: 100px auto 0 auto;
-            }
-            
-            .content img {
-                float: none;
-                display: block;
-                margin: 30px auto;
-            }
-            
-            .content_r {
-                float: none;
-                width: 90%;
-                margin: 0 auto;
-                padding-bottom: 30px;
-            }
-        }
-    </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
-</head>
-<body>
-    <video autoplay muted loop playsinline id="video-background">
-        <source src="https://files.catbox.moe/axjk38.mp4" type="video/mp4">
-        Your browser does not support HTML5 video.
-    </video>
-    <div class="video-fallback"></div>
+			.green {
+				background-color: rgb(0, 211, 248);
+			}
 
-    <div class="content">
-        <img src="hina.jpg" alt="Profile Picture">
-        <div class="content_r clearfix">
-            <div class="content_l clearfix">
-                <h1 id="anhduc">Võ Anh Đức</h1>
-                <p class="bio">" Chào mừng đến với website của tôi "</p>
-                <p class="bio">Bằng lòng với thực tại, yêu những gì mình có. Nỗ lực sẽ mang đến thành công!</p>
-                <br>
-                <p class="color_1">I am an developer</p>
-                <br>
-                <b><p class="deeppink">Mình rất giàu. Nhưng giàu tình cảm.</p></b>
-                <div class="link">
-                    <a href="https://www.facebook.com/anh.duc.59365" class="dodgerblue" target="_blank"><i class="fa fa-facebook-square"></i> Facebook</a>
-                    <a href="https://github.com/VoAnhDuc-01" class="black" target="_blank"><i class="fa fa-github"></i> Github</a>
-                    <a href="https://static.wikia.nocookie.net/mememe/images/7/73/Trollface.png/revision/latest?cb=20240302003533" class="green" target="_blank"><i class="fa fa-telegram" aria-hidden="true"></i> Telegram</a>
-                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="red" target="_blank"><i class="fa fa-youtube-play"></i> Youtube</a>
-                </div>
-                <br><br><br><br>
-                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1h4hJA0Jjb9Qv2p4DQs3DL?utm_source=generator&theme=0" width="100%" height="120" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            </div>
-        </div>
-    </div>
-</body>
+			.red {
+				background-color: rgb(216, 25, 25);
+			}
+		</style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="shortcut icon" href="icons8-sharingan-50.png" type="image/x-icon">
+	</head>
+	<body>
+		<div class="content">
+			<img src="hina.jpg" alt="">
+			<div class="content_r clearfix">
+				<div class="content_l clearfix">
+				<h1 id="anhduc">Võ Anh Đức</h1>
+					<p class="bio">" Chào mừng đến với website của tôi "</p>
+					<p class="bio">Bằng lòng với thực tại, yêu những gì mình có. Nỗ lực sẽ mang đến thành công!</p>
+					<br>
+					<p class="color_1">We're all the one and only philosopher from the day that we were born</p>
+					<!-- <p class="color_1"></p> -->
+					<br>
+					<b><p class="deeppink">Mình rất giàu. Nhưng giàu tình cảm.</p></b>
+					<div class="link">
+						<a href="https://www.facebook.com/anh.duc.59365" class="dodgerblue" target="_blank"><i class="fa fa-facebook-square"></i> Facebook</a>
+						<a href="https://github.com/VoAnhDuc-01" class="black" target="_blank"><i class="fa fa-github"></i> Github</a>
+						<a href="https://static.wikia.nocookie.net/mememe/images/7/73/Trollface.png/revision/latest?cb=20240302003533" class="green" target="_blank"><i class="fa fa-telegram" aria-hidden="true"></i> Telegram</a>
+						<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="red" target="_blank"><i class="fa fa-youtube-play"></i> Youtube</a>
+                    
+                    </div>    <br>    <br>    <br>    <br> 
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1h4hJA0Jjb9Qv2p4DQs3DL?utm_source=generator&theme=0" width="100%" height="120" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                  </div>
+			</div>
+		</div>
+   
+        <script>
+
+//////////////////////////////////////////////////////////////
+
+        </script>
+	</body>
 </html>
